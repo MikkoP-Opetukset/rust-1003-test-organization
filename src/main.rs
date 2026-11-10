@@ -1,9 +1,15 @@
-//! Placeholder for video 1003: Test Organization.
+//! Entry point for Chapter 11.3: Test Organization.
 //!
-//! The annotated demo program for chapter 11.3 will be added here.
-//! For now this crate holds only a stub, so the package, its public
-//! repository, and the submodule wiring in the course repository exist.
+//! The game rules and parser live in the library so unit tests, integration
+//! tests, and documentation examples can exercise them.
+
+use rust_1003_test_organization::{Character, parse_command};
 
 fn main() {
-    println!("rust-1003-test-organization: demo content to follow");
+    let command = parse_command("go north").expect("the example command is valid");
+    println!("Parsed command: {command:?}");
+
+    let mut player = Character::new("Aria", 20);
+    player.take_damage(6, 2);
+    println!("After taking damage: {player:?}");
 }
