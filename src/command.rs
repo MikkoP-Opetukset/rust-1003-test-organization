@@ -16,6 +16,10 @@ pub enum Command {
 
 /// Parse a command such as `go north` or `heal 10`.
 ///
+/// These examples show how to use `parse_command`. Rust also can run them as
+/// doc tests and check their assertions with `cargo test --doc`. These tests
+/// are run also when running all tests with `cargo test`.
+///
 /// ```
 /// use rust_1003_test_organization::{Command, Direction, parse_command};
 ///
